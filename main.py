@@ -1,7 +1,7 @@
+import os
 import vestaboard
 #This will print your subscription ID, and store all keys in 'credentials.txt'
-installable = vestaboard.Installable('6502eca4-6ef5-432a-8cde-c221733ac9dc', 'MDY5Y2E5NmItODljNy00MDViLWFhYTktMzg1YTdkZTU5NjU3')
-
+installable = vestaboard.Installable(os.environ['api_key'], os.environ['api_secret'])
 #Pass in the Installable() instance to a new instance of Board()
 vboard = vestaboard.Board(installable)
 #vboard.post(str())
